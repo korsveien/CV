@@ -1,92 +1,199 @@
-%____________________________________________________________________________
-% @brief    Latex-CV for Nils Peder Korsveien
-% @author   Nils Peder Korsveien
-% @date     Februar 2012
-% @source   http://www.tjansson.dk/?p=604
-%____________________________________________________________________________
-\documentclass[margin,line,a4paper]{resume}
+% Source code for my resume in latex, Based on guide from:
+% http://www.howtotex.com/general/a-guide-to-building-a-plain-and-simple-latex-cv/
+
+
+% Preamble
+\documentclass[paper=a4, fontsize=11pt]{scrartcl}
  
 \usepackage[utf8]{inputenc}
-\usepackage[english,norsk]{babel}
 \usepackage[T1]{fontenc}
-\usepackage{graphicx,wrapfig}
-\usepackage{url}
-\usepackage[colorlinks=false, a4paper=true, pdfstartview=FitV,
-linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
-\pdfcompresslevel=9
- 
+\usepackage[english,norsk]{babel}
+\usepackage{amsmath,amsfonts,amsthm}
+\usepackage[pdftex]{graphicx}
+\usepackage[svgnames]{xcolor}
+\usepackage{geometry}
+    \textheight=700px
+\usepackage{wrapfig}
+\usepackage[colorlinks=true, a4paper=true, pdfstartview=FitV,
+            linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+
+\usepackage{sectsty} 
+\definecolor{myred}{RGB}{240, 20, 20}
+\sectionfont{
+        \color{White}
+        \usefont{OT1}{ptm}{n}{n}
+        \noindent\colorbox{Grey}
+}
+
+% Commands
+\newlength{\spacebox} 
+\settowidth{\spacebox}{8888888888}
+
+\newlength{\skillbox} 
+\settowidth{\skillbox}{8888888888888888}
+
+\newlength{\namebox} 
+\settowidth{\namebox}{8888888888888888888888888}
+
+\newcommand{\sepspace}{\vspace*{1em}}
+
+\newcommand{\MyName}[1]{ 
+    \Huge \usefont{OT1}{ptm}{n}{n}\noindent#1 
+    \par \normalsize \normalfont}
+
+\newcommand{\MySlogan}[1]{
+		\Large\usefont{OT1}{ptm}{m}{n}\noindent \textit{#1} % Slogan (optional)
+		\par \normalsize \normalfont}
+
+\newcommand{\PersonalEntry}[2]{ 
+    \noindent\hangindent=2em\hangafter=0 
+    \parbox{\spacebox}{ 
+    \textit{#1}} 
+    \hspace{1.5em} #2 \par}
+
+ % Same as \PersonalEntry
+\newcommand{\SkillsEntry}[2]{						
+		\noindent\hangindent=2em\hangafter=0 		% Indentation
+		\parbox{\skillbox}{						% Box to align text
+		\textit{#1}}								% Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}					% Entry value	
+
+\newcommand{\EducationEntry}[4]{ 
+    \noindent \textbf{#1} \hfill 
+    \colorbox{White}{% 
+        \parbox{6em}{% 
+        \hfill\color{Black}#2}} \par 
+    \noindent \textit{#3} \par 
+    \noindent\hangindent=2em\hangafter=0 \small #4 
+    \normalsize \par}
+
+\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\colorbox{White}{\color{Black}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
+
+% Document
 \begin{document}
-{\sc \Large Curriculum Vitae}
-\begin{resume}
-\vspace{0.5cm}
-\begin{wrapfigure}{R}{0.4\textwidth}
-\vspace{-1cm}
-\begin{center}
-\includegraphics[width=0.4\textwidth]{me}
-\end{center}
-\vspace{-1cm}
+
+\MyName{Nils Peder Korsveien} 
+\MySlogan{Curriculum Vitae}
+\sepspace
+
+% Picture
+\begin{wrapfigure}{r}{0.3\textwidth} 
+    \vspace*{-6em} 
+    \includegraphics[scale=0.21]{profil} 
+    \vspace*{-2em} 
 \end{wrapfigure}
 
-\section{\mysidestyle Personalia}%\vspace{2mm}
-Nils Peder Korsveien \\
-Trimveien 8, H0420 \\
-0372 Oslo \\
-tlf: 47057184 \\
-\href{mailto:nilspk@ulrik.uio.no}{\tt{nilspk@ulrik.uio.no}}\\
-\href{http://folk.uio.no/nilspk}{\tt{folk.uio.no/nilspk}}\\
-\href{http://github.com/nilspk}{\tt{github.com/nilspk}}\\
-\\
-Jeg er en 26 år gammel student som går bachelor i informatikk på
-UiO, samtidig som jeg jobber deltid som kontormedarbeider hos Kredinor.
+\PersonalEntry{}{}
+\PersonalEntry{Født}{23.07.1985}
+\PersonalEntry{Adresse}{Trimveien 8 H420, 0372 Oslo}
+\PersonalEntry{Telefon}{47057184}
+\PersonalEntry{Mail} {\href{mailto:nilspk@ulrik.uio.no}{\tt{nilspk@ulrik.uio.no}}}
+\PersonalEntry{Web} {\href{http://folk.uio.no/nilspk}{\tt{folk.uio.no/nilspk}}}
+\PersonalEntry{Github}{\href{http://github.com/nilspk}{\tt{github.com/nilspk}}}
+\sepspace
+% \noindent Jeg er en 26 år gammel student som går bachelor i informatikk på
+% UiO, samtidig som jeg jobber deltid som kontormedarbeider hos Kredinor.
 
+% dirty, but works
+\sepspace
+\sepspace
+\sepspace
+\section*{Utdanning}
+\EducationEntry
+{Bachelor i Informatikk}
+{2009$\rightarrow$}
+{UiO}
+{Dette er siste semesteret før jeg er ferdig med bachelor graden i
+Informatikk. Jeg har lagt ut hvilke emner jeg har tatt på min
+hjemmeside.}
+\sepspace
+\sepspace
 
-\section{\mysidestyle Utdanning}%\vspace{1mm}
-\begin{description}
-\item[2004] Medier og kommunikasjon med allmenn påbygning, VGS
-\item[2006] Forkurs for ingeniørutdanning, HIST
-\item[2007] Ettårig studie i historiefag, NTNU
-\item[2009-] Bachelor i informatikk, UiO
-\end{description}
+\EducationEntry
+{Ettårig, Nyere Historie}
+{2007-08}
+{NTNU}
+{Ettårig studie i Trondheim med fag som Stormaktspolitikk, Historiefag,
+og Ex.Phil.}
+\sepspace
+\sepspace
 
-\section{\mysidestyle Jobberfaring}%\vspace{1mm}
-\begin{description}
-\item[2004-05] Kassaoperatør, Coop Obs! Rudshøgda.
-\item[2005-07] Lagermedarbeider, ASKO Hedmark.
-\item[2009-] Kontormebarbeider, Kredinor.
-\end{description}
+\EducationEntry
+{Forkurs for ingeniørfag}
+{2007-08}
+{HIST}
+{Ettårig utdanning jeg tok for å få den nødvendige fordypningen i Matte,
+Fysikk og Kjemi som er påkrevd for å søke mer tekniske studiretninger.}
+\sepspace
 
-\section{\mysidestyle Språk}%\vspace{1mm}
-\begin{description}
-\item[Engelsk] flytende.
-\item[Java] Erfaren.
-\item[C] Erfaren.
-\item[Python] Noe erfaring.
-\item[Scheme] Noe erfaring.
-\end{description}
+\sepspace
+\section*{Jobberfaring}
+\WorkEntry
+{Kontormedarbeider}
+{2009$\rightarrow$}
+{Kredinor}
+{Deltidsansatt på kveldsteam hos Kredinor. Dette er en jobb jeg har hatt
+ved siden av studiene i Informatikk. Jeg har jobbet 10 timer i uken
+fordelt på to kvelder på hverdager. Å balansere krevende skolearbeid med
+deltidsjobb har vært en nyttig og lærerik erfaring.}
+\sepspace
+\sepspace
 
-\section{\mysidestyle IT}%\vspace{1mm}
-\begin{description}
-\item[Git] Erfaren.
-\item[Windows] Noe erfaring.
-\item[Mac OS] Erfaren.
-    \item[Linux] Noe erfaring.
-\end{description}
+\WorkEntry
+{Lagermedarbeider}
+{2005-08}
+{ASKO Hedmark}
+{Jobbet som plukker på grossistlager. Dette var en jobb jeg hadde fast
+som sommerjobb over noen år, samt en periode på høsten 2008 hvor jeg var
+fast ansatt. }
+\sepspace
+\sepspace
 
-% \section{\mysidestyle Programvare}%\vspace{1mm}
-% \begin{description}
-% \item[Adobe CS] Erfaren.
-% \end{description}
+\newpage
+\WorkEntry
+{Kassaoperatør}
+{2004-05}
+{Coop Obs! Rudshøgda}
+{Jobb jeg hadde i friåret etter videregående.}
+\sepspace
 
-\section{\mysidestyle Sideprosjekter}%\vspace{1mm}
-\begin{description}
-\item[B.L.I.M.P] En selvstyrt flyvende
-robot! \href{http://bit.ly/ifiblimp}{\tt{(bit.ly/ifiblimp)}}
-\end{description}
+\sepspace
+\section*{Kompetanse}
+\SkillsEntry{Språk}{Norsk (morsmål)}
+\SkillsEntry{}{Engelsk (flytende)}
+\sepspace
+\SkillsEntry{Programmering}{Java, C, Objective-C Python, Scheme, SQL, \LaTeX}
+\sepspace
+\SkillsEntry{OS}{Windows, Mac OS X, Linux}
+\sepspace
+\SkillsEntry{Annet}{Git, Vim, Arduino, Adobe CS, XCode}
 
-\section{\mysidestyle Referanse}%\vspace{1mm}
-\begin{description}
-\item[Lise Nordstrøm, Kredinor] 90503009
-\end{description}
-\end{resume}
+\sepspace
+\sepspace
+\section*{Sideprosjekter}
+\WorkEntry
+{B.L.I.M.P}
+{2011$\rightarrow$}
+{En selvflyvende robot!}
+{Dette var et prosjekt vi i utgangspunktet startet med i bruksorentert
+design, men som var så spennende at vi tok det videre og presenterte det
+på Idéfestivalen på Blinderen i September 2011. Video av dette kan sees
+her: \href{http://www.bit.ly/ifiblimp}{\tt{youtube-video}}. Prosjektet
+har vært ekstremt lærerikt, og planene framover er å ha med roboten vår
+på The Gathering, hvor vi har tenkt å promotere instituttet for
+Informatikk.}
 
+\sepspace
+\sepspace
+\section*{Referanse}
+Oppgis ved behov.
 \end{document}
+
+% 
+% \item[B.L.I.M.P] En selvstyrt flyvende
+% robot! \href{http://bit.ly/ifiblimp}{\tt{(bit.ly/ifiblimp)}}
