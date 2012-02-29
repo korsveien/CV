@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.5)  28 FEB 2012 19:25
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.5)  29 FEB 2012 07:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -616,8 +616,7 @@ les
 \spacebox=\skip54
 \skillbox=\skip55
 \namebox=\skip56
-
-No file cv.aux.
+ (./cv.aux)
 \openout1 = `cv.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -634,6 +633,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
+
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -709,6 +709,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 78.
 LaTeX Info: Redefining \pageref on input line 78.
 LaTeX Info: Redefining \nameref on input line 78.
+
+(./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
@@ -750,32 +752,26 @@ File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./profi
 l.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
 
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
  (./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 195.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package rerunfilecheck Info: File `cv.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
-
-Package rerunfilecheck Warning: File `cv.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `cv.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 195.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 8854 strings out of 493633
- 128677 string characters out of 3143378
- 252934 words of memory out of 3000000
- 12005 multiletter control sequences out of 15000+200000
+ 8862 strings out of 493633
+ 128746 string characters out of 3143378
+ 252038 words of memory out of 3000000
+ 12007 multiletter control sequences out of 15000+200000
  21125 words of font info for 50 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  36i,7n,39p,243b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -791,7 +787,7 @@ exmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2011/tex
 mf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2011/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on cv.pdf (2 pages, 666243 bytes).
+Output written on cv.pdf (2 pages, 667314 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
