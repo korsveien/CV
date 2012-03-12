@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.5)  29 FEB 2012 08:24
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.2.5)  29 FEB 2012 23:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -619,20 +619,20 @@ les
  (./cv.aux)
 \openout1 = `cv.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 91.
+LaTeX Font Info:    ... okay on input line 91.
 
 (/usr/local/texlive/2011/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -697,7 +697,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box31
-Package hyperref Info: Link coloring ON on input line 78.
+Package hyperref Info: Link coloring ON on input line 91.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -706,15 +706,15 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count122
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 91.
+LaTeX Info: Redefining \pageref on input line 91.
+LaTeX Info: Redefining \nameref on input line 91.
 
 (./cv.out) (./cv.out)
 \@outlinefile=\write3
 \openout3 = `cv.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 80.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 93.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -722,24 +722,29 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 <profil.jpg, id=4, 542.025pt x 727.71875pt>
 File: profil.jpg Graphic file (type jpg)
  <use profil.jpg>
-Package pdftex.def Info: profil.jpg used on input line 87.
-(pdftex.def)             Requested size: 113.8286pt x 152.82544pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 91.
+Package pdftex.def Info: profil.jpg used on input line 100.
+(pdftex.def)             Requested size: 124.66312pt x 167.37178pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+[][]
+ []
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 104.
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 91.
+LaTeX Font Info:    Try loading font information for U+msb on input line 104.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 95.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 109.
+
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 106.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 117.
 
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmss.fd
@@ -748,25 +753,25 @@ File: t1cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 {/usr/local/texlive/2011/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./profi
 l.jpg>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 225.
 
 [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 225.
  (./cv.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 225.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 225.
 Package rerunfilecheck Info: File `cv.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 225.
  ) 
 Here is how much of TeX's memory you used:
- 8858 strings out of 493633
- 128685 string characters out of 3143378
- 252038 words of memory out of 3000000
- 12003 multiletter control sequences out of 15000+200000
+ 8859 strings out of 493633
+ 128699 string characters out of 3143378
+ 253098 words of memory out of 3000000
+ 12004 multiletter control sequences out of 15000+200000
  21125 words of font info for 50 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 36i,7n,39p,243b,333s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,7n,39p,243b,331s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
 live/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
@@ -779,7 +784,7 @@ exmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2011/tex
 mf-dist/fonts/type1/public/cm-super/sftt1095.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2011/texmf-dist/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on cv.pdf (2 pages, 667467 bytes).
+Output written on cv.pdf (2 pages, 668388 bytes).
 PDF statistics:
  71 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream

@@ -19,11 +19,18 @@
 
 \usepackage{sectsty} 
 \definecolor{myred}{RGB}{240, 20, 20}
-\sectionfont{
-        \color{White}
-        \usefont{OT1}{ptm}{m}{n}
-        \noindent\colorbox{Grey}
-}
+
+% Custom, with colorbox
+% \sectionfont{
+%         \color{White}
+%         \usefont{OT1}{ptm}{m}{n}
+%         \noindent\colorbox{Grey}
+% }
+
+% Custom, with ruler
+    \sectionfont{% 
+        \usefont{OT1}{ptm}{m}{n}% 
+        \sectionrule{0pt}{0pt}{-6pt}{0.5pt} }
 
 % Commands
 \newlength{\spacebox} 
@@ -60,20 +67,26 @@
 
 \newcommand{\EducationEntry}[4]{ 
     \noindent \textbf{#1} \hfill 
-    \colorbox{White}{% 
+    \colorbox{Grey}{% 
         \parbox{6em}{% 
-        \hfill\color{Black}#2}} \par 
+        \hfill\color{White}#2}} \par 
     \noindent \textit{#3} \par 
     \noindent\hangindent=2em\hangafter=0 \small #4 
     \normalsize \par}
 
 \newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
 		\noindent \textbf{#1} \hfill 					% Jobname
-		\colorbox{White}{\color{Black}#2} \par		% Duration
+		\colorbox{Grey}{\color{White}#2} \par		% Duration
 		\noindent \textit{#3} \par					% Company
 		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
 		\normalsize \par}
 
+\newcommand{\ReferenceEntry}[4]{						% Same as \EducationEntry
+		\noindent \textbf{#1} \hfill 					% Jobname
+		\colorbox{White}{\color{Black}#2} \par		% Duration
+		\noindent \textit{#3} \par					% Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
+		\normalsize \par}
 % Document
 \begin{document}
 
@@ -84,12 +97,13 @@
 % Picture
 \begin{wrapfigure}{r}{0.3\textwidth} 
     \vspace*{-6em} 
-    \includegraphics[scale=0.21]{profil} 
-    \vspace*{-2em} 
+    \includegraphics[scale=0.23]{profil} 
+    \vspace*{-3em} 
 \end{wrapfigure}
 
 \PersonalEntry{}{}
 \PersonalEntry{Født}{23.07.1985}
+\PersonalEntry{Sivilstatus}{Ugift}
 \PersonalEntry{Adresse}{Trimveien 8 H420, 0372 Oslo}
 \PersonalEntry{Telefon}{47057184}
 \PersonalEntry{Mail} {\href{mailto:nilspk@ulrik.uio.no}{\tt{nilspk@ulrik.uio.no}}}
@@ -100,9 +114,6 @@
 % UiO, samtidig som jeg jobber deltid som kontormedarbeider hos Kredinor.
 
 % dirty, but works
-\sepspace
-\sepspace
-\sepspace
 \section*{Utdanning}
 \EducationEntry
 {Bachelor i Informatikk}
@@ -118,7 +129,7 @@ hjemmeside.}
 {Ettårig, Nyere Historie}
 {2007-08}
 {NTNU}
-{Ettårig studie i Trondheim med fag som Stormaktspolitikk, Historiefag,
+{Ettårig studie i Trondheim med fag som Stormaktspolitikk, Historiefag
 og Ex.Phil.}
 \sepspace
 \sepspace
@@ -136,12 +147,11 @@ Fysikk og Kjemi som er påkrevd for å søke mer tekniske studiretninger.}
 {Videregående utdanning}
 {2001 - 2004}
 {Ringsaker Videregående}
-{Jeg studerte 2 år Medier og Kommunikasjon på Ankerskogen VGS på Hamar
-,hvor vi drev mye med prosjektarbeid,
+{Jeg studerte 2 år Medier og Kommunikasjon på Ankerskogen VGS på Hamar,
+ hvor vi drev mye med prosjektarbeid,
 før jeg tok Allmennfaglig påbygning på Ringsaker VGS.}
 \sepspace
 \sepspace
-\newpage
 \section*{Jobberfaring}
 \WorkEntry
 {Kontormedarbeider}
@@ -154,6 +164,7 @@ deltidsjobb har vært en nyttig og lærerik erfaring.}
 \sepspace
 \sepspace
 
+\newpage
 \WorkEntry
 {Lagermedarbeider}
 {2005-08}
@@ -200,5 +211,15 @@ Informatikk.}
 \sepspace
 \sepspace
 \section*{Referanse}
-Oppgis ved behov.
+\ReferenceEntry
+{Roger Antonsen}
+{\textit{tlf:}22852482}
+{Førstelektor, Institutt for informatikk}
+{}
+\ReferenceEntry
+{Lise Nordstrøm}
+{\textit{tlf:}90503009}
+{Avdelingsleder, Kredinor}
+{}
+% Oppgis ved behov.
 \end{document}
