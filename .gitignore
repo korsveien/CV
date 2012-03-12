@@ -1,9 +1,0 @@
-.DS_Store
-.gitignore
-cv_accenture*
-CV_screen*
-*.out
-*.aux
-*.pdf
-*.pxm
-*.log
