@@ -1,0 +1,11 @@
+.DS_Store
+*.out
+*.aux
+*.pdf
+*.pxm
+*.log
+*.jpg
+*.cls
+*.fls
+*latexmk
+
