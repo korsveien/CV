@@ -1,258 +1,119 @@
-% Source code for my resume in latex, Based on guide from:
-% http://www.howtotex.com/general/a-guide-to-building-a-plain-and-simple-latex-cv/
-
-
-% Preamble
-\documentclass[paper=a4, fontsize=11pt]{scrartcl}
- 
+\documentclass[paper=a4, fontsize=10pt]{article}
+\usepackage{array, xcolor, lipsum, bibentry}
+\usepackage[margin=3cm]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english,norsk]{babel}
-\usepackage{amsmath,amsfonts,amsthm}
-\usepackage[pdftex]{graphicx}
-\usepackage[svgnames]{xcolor}
-\usepackage{geometry}
-    \textheight=700px
-\usepackage{wrapfig}
 \usepackage[colorlinks=true, a4paper=true, pdfstartview=FitV,
             linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
 
-\usepackage{sectsty} 
-\definecolor{myred}{RGB}{240, 20, 20}
+\title{\bfseries\Huge Nils Peder Korsveien}
+\author{Curriculum Vitae}
+\date{}
 
-% Custom, with colorbox
-% \sectionfont{
-%         \color{White}
-%         \usefont{OT1}{ptm}{m}{n}
-%         \noindent\colorbox{Grey}
-% }
-
-% Custom, with ruler
-    \sectionfont{% 
-        \usefont{OT1}{ptm}{m}{n}% 
-        \sectionrule{0pt}{0pt}{-6pt}{0.5pt} }
-
-% Commands
-\newlength{\spacebox} 
-\settowidth{\spacebox}{8888888888}
-
-\newlength{\skillbox} 
-\settowidth{\skillbox}{8888888888888888}
-
-\newlength{\namebox} 
-\settowidth{\namebox}{8888888888888888888888888}
-
-\newcommand{\sepspace}{\vspace*{1em}}
-
-\newcommand{\MyName}[1]{ 
-    \Huge \usefont{OT1}{ptm}{m}{n}\noindent#1 
-    \par \normalsize \normalfont}
-
-\newcommand{\MySlogan}[1]{
-		\Large\usefont{OT1}{ptm}{m}{n}\noindent \textit{#1} % Slogan (optional)
-		\par \normalsize \normalfont}
-
-\newcommand{\PersonalEntry}[2]{ 
-    \noindent\hangindent=2em\hangafter=0 
-    \parbox{\spacebox}{ 
-    \textit{#1}} 
-    \hspace{1.5em} #2 \par}
-
- % Same as \PersonalEntry
-\newcommand{\SkillsEntry}[2]{						
-		\noindent\hangindent=2em\hangafter=0 		% Indentation
-		\parbox{\skillbox}{						% Box to align text
-		\textit{#1}}								% Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}					% Entry value	
-
-\newcommand{\EducationEntry}[4]{ 
-    \noindent \textbf{#1} \hfill 
-    \colorbox{Grey}{% 
-        \parbox{6em}{% 
-        \hfill\color{White}#2}} \par 
-    \noindent \textit{#3} \par 
-    \noindent\hangindent=2em\hangafter=0 \small #4 
-    \normalsize \par}
-
-\newcommand{\WorkEntry}[4]{						% Same as \EducationEntry
-		\noindent \textbf{#1} \hfill 					% Jobname
-		\colorbox{Grey}{\color{White}#2} \par		% Duration
-		\noindent \textit{#3} \par					% Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
-		\normalsize \par}
-
-\newcommand{\ReferenceEntry}[4]{						% Same as \EducationEntry
-		\noindent \textbf{#1} \hfill 					% Jobname
-		\colorbox{White}{\color{Black}#2} \par		% Duration
-		\noindent \textit{#3} \par					% Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 	% Description
-		\normalsize \par}
-% Document
+\definecolor{lightgray}{gray}{0.8}
+\newcolumntype{L}{>{\raggedleft}p{0.14\textwidth}}
+\newcolumntype{R}{p{0.8\textwidth}}
+\newcommand\VRule{\color{lightgray}\vrule width 0.5pt}
 \begin{document}
+\maketitle
+\vspace{0.3em}
+\section*{Om meg}
+Jeg er 28 år og tar master i informatikk samtidig som jeg jobber deltid
+hos PayEx som systemutvikler. Jeg er nysgjerrig på nye teknologier og
+brenner for informatikk og design.
 
-\MyName{Nils Peder Korsveien} 
-\MySlogan{Curriculum Vitae}
-\sepspace
+\section*{Personlige opplysninger}
+\begin{tabular}{L!{\VRule}R}
+Født&23.07.1985\\
+Sivilstatus&Ugift\\
+Adresse&Moldegata 15, H0702, 0445 Oslo\\[5pt]
+E-post&\href{mailto:nilspk@ifi.uio.no}{nilspk@ifi.uio.no}\\
+Mobil&470 57 184\\[5pt]
+LinkedIn&\href{http://lnkd.in/JD8kz5}{http://lnkd.in/JD8kz5}\\
+Github&\href{http://github.com/nilspk}{http://github.com/nilspk}\\
+\end{tabular}
 
-% Picture
-\begin{wrapfigure}{r}{0.3\textwidth} 
-    \vspace*{-6em} 
-    \includegraphics[scale=0.23]{profil} 
-    \vspace*{-3em} 
-\end{wrapfigure}
-
-\PersonalEntry{}{}
-\PersonalEntry{Født}{23.07.1985}
-\PersonalEntry{Sivilstatus}{Ugift}
-\PersonalEntry{Adresse}{Moldegata 15 H0702, 0445 Oslo}
-\PersonalEntry{Telefon}{47057184}
-\PersonalEntry{Mail} {\href{mailto:nilspk@ifi.uio.no}{\tt{nilspk@ifi.uio.no}}}
-\PersonalEntry{Linkedin}
-{\href{http://lnkd.in/JD8kz5}{\tt{http://lnkd.in/JD8kz5}}}
-\PersonalEntry{Github}{\href{http://github.com/nilspk}{\tt{github.com/nilspk}}}
-\sepspace
-
-% dirty, but works
-\section*{Utdanning}
-\EducationEntry
-{Master i Informatikk, Distribuerte systemer}
-{2012$\rightarrow$}
-{UiO}
-{Jeg studerer nå master, med spesialisering i distribuerte systemer.
-Masteroppgaven min går ut på å implementere og sammenligne forskjellige 
-publish-subscribe systemer for P2P-nettverk.}
-\sepspace
-\sepspace
-
-\EducationEntry
-{Bachelor i Informatikk}
-{2009$\rightarrow$2012}
-{UiO}
-{Fullført bachelor i informatikk: programmering og nettverk våren 2012.
-Hvilke fag jeg har tatt i løpet av bacheloren er listet opp på min
-Linkedin-profil.}
-\sepspace
-\sepspace
-
-\EducationEntry
-{Ettårig, Nyere Historie}
-{2007-08}
-{NTNU}
-{Ettårig studie i Trondheim med fag som Stormaktspolitikk, Historiefag
-og Ex.Phil.}
-\sepspace
-\sepspace
-
-\EducationEntry
-{Forkurs for ingeniørfag}
-{2006-07}
-{HIST}
-{Ettårig utdanning jeg tok for å få den nødvendige fordypningen i Matte,
-Fysikk og Kjemi som er påkrevd for å søke mer tekniske studiretninger.}
-\sepspace
-\sepspace
-
-\EducationEntry
-{Videregående utdanning}
-{2001 - 2004}
-{Ringsaker Videregående}
-{Jeg studerte 2 år Medier og Kommunikasjon på Ankerskogen VGS på Hamar,
- hvor vi drev mye med prosjektarbeid,
-før jeg tok Allmennfaglig påbygning på Ringsaker VGS.}
-\sepspace
-\sepspace
-
-\newpage
 \section*{Jobberfaring}
-\WorkEntry
-{Systemutvikler}
-{2013$\rightarrow$}
-{PayEx AS}
-{Dette er min nåværende arbeidsgiver etter at Mynt Betalingsterminaler
+\begin{tabular}{L!{\VRule}R}
+2013--&{\bf Systemutvikler hos PayEx}\\
+&
+Dette er min nåværende arbeidsgiver etter at Mynt Betalingsterminaler
 ble kjøpt opp av PayEx. Oppkjøpet førte med seg noen forandringer som at
-vi nå bruker Scrum som utviklingsmetode og C++ som utviklingsspråk. Hovedansvaret mitt er fortsatt grafikk og brukergrensesnitt. Jeg trives veldig godt med å ha en rolle som både interaksjonsdesigner og systemutvikler, siden det både gir variasjon og en helt unik kompetanse.}
-\sepspace
-\sepspace
+vi nå bruker Scrum som utviklingsmetode og C++ som utviklingsspråk.
+Hovedansvaret mitt er fortsatt grafikk og brukergrensesnitt. Jeg trives
+veldig godt med å ha en rolle som både interaksjonsdesigner og
+systemutvikler, siden det både gir variasjon og en helt unik
+kompetanse.\\[5pt]
 
-\WorkEntry
-{Juniorutvikler}
-{2012-13}
-{Mynt Betalingsterminaler AS}
-{Etter å ha jobbet her sommeren 2012 hvor vi utviklet et nytt
-brukergrensesnitt som skal brukes på kortterminaler, er dette nå min
+2012-2013&{\bf Juniorutvikler hos Mynt Betalingsterminaler}\\
+&
+Etter å ha jobbet her sommeren 2012 hvor vi utviklet et nytt
+brukergrensesnitt som skal brukes på kortterminaler, ble dette min
 faste deltidsjobb. Dette gir meg relevant og praktisk erfaring jeg veldig god
-nytte av ved siden av studiene.}
-\sepspace
-\sepspace
+nytte av ved siden av studiene.
+\\[5pt]
 
-\WorkEntry
-{Kontormedarbeider}
-{2009 - 2012}
-{Kredinor}
-{Deltidsansatt på kveldsteam hos Kredinor. Dette er en jobb jeg har hatt
-ved siden av studiene i Informatikk. Jeg har jobbet 10 timer i uken
-fordelt på to kvelder på hverdager. Å balansere krevende skolearbeid med
-deltidsjobb har vært en nyttig og lærerik erfaring.}
-\sepspace
-\sepspace
+2009-2012&{\bf Kontormedarbeider hos Kredinor}\\
+&
+Deltidsansatt på kveldsteam hos Kredinor. Dette er en jobb jeg har hatt
+ved siden av bachelorstudiene i Informatikk.Å balansere krevende skolearbeid med
+deltidsjobb har vært en nyttig og lærerik erfaring.
+\\[5pt]
 
-\WorkEntry
-{Lagermedarbeider}
-{2005-08}
-{ASKO Hedmark}
-{Jobbet som plukker på grossistlager. Dette var en jobb jeg hadde fast
+2005-2008&{\bf Lagermedarbeider hos ASKO Hedmark}\\
+&
+Jobbet som plukker på grossistlager. Dette var en jobb jeg hadde fast
 som sommerjobb over noen år, samt en periode på høsten 2008 hvor jeg var
-fast ansatt. }
-\sepspace
+fast ansatt.
+\end{tabular}
 
-\sepspace
-\section*{Kompetanse}
-\SkillsEntry{Språk}{Norsk (morsmål)}
-\SkillsEntry{}{Engelsk (flytende)}
-\sepspace
-\SkillsEntry{Programmering}{Clojure, Ruby, C, C++, Java, Python, Java, Scheme, SQL, Bash, \LaTeX}
-\sepspace
-\SkillsEntry{OS}{Mac OS X, Linux, Windows}
-\sepspace
-\SkillsEntry{Annet}{git, hg, Vim, zsh, tmux, Arduino, Adobe CS, Eclipse, IntelliJ}
+\section*{Utdanning}
+\begin{tabular}{L!{\VRule}R}
+2009--&{\bf Master i Informatikk, Distribuerte Systemer, UiO}\\
+2009--2012&{Bachelor i informatikk, Programmering og Nettverk, UiO}\\
+2007--2008&{Ettårig, Nyere Historie, NTNU}\\
+2006--2007&{Forkurs for ingeniørfag, HIST}\\
+2001--2004&{Videregående, Medier og Kommunikasjon+Allmennfaglig påbygning}\\
+\end{tabular}
 
-\sepspace
-\sepspace
 \section*{Sideprosjekter}
-\WorkEntry
-{Boardwar(\href{http://boardwar.me}{\tt{boardwar.me}})}
-{2013}
-{App til Android }
-{Boardwar er en app til Android hvor du kan spille Reversi mot andre .
-Dette var et hobbyprosjekt av en venn og kollega. Han ansatte meg
+\begin{tabular}{L!{\VRule}R}
+2013&{\bf Boardwar}\\
+&
+Boardwar er en app til Android hvor du kan spille Reversi mot andre
+brukere.
+Dette var hobbyprosjektet til en venn og kollega. Han ansatte meg
 til å designe brukergrensnittet og annen grafikk vi brukte til
-nettsider og promo. Det er veldig givende å kunne variere med slik
-type arbeid når både skole og jobb involverer litt mer lavnivå{{{{
-programmering.}
-\sepspace
-\WorkEntry
-{B.L.I.M.P}
-{2011$\rightarrow$2012}
-{En selvflyvende robot!}
-{Dette var et prosjekt vi i utgangspunktet startet med i et skolefag om bruksorientert
-design, men som var så spennende at vi tok det videre og presenterte det
-på Idéfestivalen på Blinderen i September 2011. Video av dette kan sees
-her: \href{http://www.bit.ly/ifiblimp}{\tt{youtube-video}}. Prosjektet
-har vært veldig lærerikt, og vi tok også med roboten på The Gathering i
-2012 for å promotere institutt for informatikk.}
+nettsider og promo. Det var veldig moro å drive med dette ved siden av
+arbdeid og skole, siden jeg også er veldig interessert i design og
+brukeropplevelse.\\[5pt]
 
-\sepspace
-\sepspace
+2012-2013&{\bf B.L.I.M.P - En selvflyvende robot!}\\
+&
+Dette var et prosjekt vi i utgangspunktet startet med i et skolefag om bruksorientert
+design, men som var så spennende at vi tok det videre og presenterte det
+på Idéfestivalen på Blinderen i September 2011. Video av dette kan sees \href{http://www.bit.ly/ifiblimp}{\tt{her}}. Prosjektet
+har vært veldig lærerikt, og vi tok også med roboten på The Gathering i
+2012 for å promotere institutt for informatikk.\\
+\end{tabular}
+
+\section*{Språk}
+\begin{tabular}{L!{\VRule}R}
+Norsk&Morsmål\\
+Engelsk&Flytende\\
+\end{tabular}
+
+\section*{Kompetanse}
+\begin{tabular}{L!{\VRule}R}
+Språk&Clojure, Ruby, C, C++, Java, Python, Scheme, SQL, Bash, \LaTeX \\[5pt]
+OS&Mac OS X, Linux, Windows\\[5pt]
+VCS&Git, Mercurial, SVN\\[5pt]
+Editor/IDE&Vim, IntelliJ, Eclipse\\[5pt]
+Annet&Scrum, Adobe Photoshop og Illustrator, Arduino, zsh, tmux, gnuplot\\[5pt]
+\end{tabular}
+
 \section*{Referanse}
-% \ReferenceEntry
-% {Roger Antonsen}
-% {\textit{tlf:}22852482}
-% {Førstelektor, Institutt for informatikk}
-% {}
-% \ReferenceEntry
-% {Lise Nordstrøm}
-% {\textit{tlf:}90503009}
-% {Avdelingsleder, Kredinor}
-% {}
-Oppgis ved behov.
+Oppgis etter behov.
+
 \end{document}
